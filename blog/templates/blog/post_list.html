@@ -10,6 +10,19 @@
 </div>
 <h1>Siemanko</h1>
 <h2>Witam na mojej stronie.</h2>
+<div name="posts">
+    {% for post in posts %}
+        <div class="post-date">
+            <p>{{ post.publish_date }}</p>
+        </div>
+        <div class="post-title">
+            <h6>{{ post.title }}</h6>
+        </div>
+        <div class="post-content'">
+            <p>{{ post.content }}</p>
+        </div>
+    {% endfor %}
+</div>
 
 </body>
 </html>
