@@ -1,25 +1,36 @@
+{% load staticfiles %}
 <html>
 <head>
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
+
 <div id="admin-login">
-    <a href="/admin">
-        <p>Do panelu administracyjnego! </p>
-    </a>
+    <a href="/admin"><p>Do panelu administracyjnego! </p></a>
 </div>
-<h1>Siemanko</h1>
-<h2>Witam na mojej stronie.</h2>
-<div name="posts">
+
+<div class="page-header">
+    <h1>Siemanko</h1>
+    <h2>Witam na mojej stronie.</h2>
+</div>
+
+<div class="posts">
     {% for post in posts %}
-        <div class="post-date">
-            <p>Published: {{ post.publish_date }}</p>
-        </div>
-        <div class="post-title">
-            <h4>{{ post.title }}</h4>
-        </div>
-        <div class="post-content'">
-            <p>{{ post.content|linebreaks }}</p>
+        <div class="post">
+            <div class="post-date">
+                <p>Published: {{ post.publish_date }}</p>
+            </div>
+            <div class="post-title">
+                <h5>{{ post.title }}</h5>
+            </div>
+            <div class="post-content'">
+                <p>{{ post.content|linebreaks }}</p>
+            </div>
+            <div class="post-author">
+                <p>{{ post.author }}</p>
+            </div>
         </div>
     {% endfor %}
 </div>

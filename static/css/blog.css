@@ -1,0 +1,35 @@
+h1, h2 {
+    color: #993300;
+}
+h1 {
+    color: #FCA205;
+    font-family: 'Lobster';
+}
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h2 {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.posts {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.post-date {
+    float: right;
+    color: #828282;
+}
+
+.post {
+    margin-bottom: 70px;
+}
