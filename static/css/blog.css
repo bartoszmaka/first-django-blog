@@ -1,6 +1,6 @@
 h1 {
     color: #FCA205;
-    font-family: 'Lobster';
+    font-family: 'Lobster', cursive;
 }
 .page-header {
     background-color: #ff9400;
@@ -33,26 +33,58 @@ h1, h2, h3, h4 {
 }
 
 .post p {
-    font-family: "Source Code Pro";
+    font-family: "Source Code Pro", sans-serif;
     font-size: 16px;
     padding-left: 30px;
 }
 
 .post-date {
     float: right;
-    background-color: #FCA205;
-    padding: 20px;
-    padding-left: 0px;
+    background-color: #ff9400;
+    padding: 20px 20px 20px 0px;
     border-radius: 25px;
 }
 
-.post-author p{
+.post-author p {
     padding-left: 40px;
 }
 
-/* */
-
-.post:nth-child(even){
+.post:nth-child(even) {
     background-color: #f4f379;
 }
 
+#control-panel {
+    margin-top: -21px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 5px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ff9400;
+}
+
+#panel-button {
+    margin-left: -5px;
+    margin-top: -5px;
+    border-radius: 15px;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    background-color: #ff9400;
+    transition-duration: 750ms;
+}
+#panel-button a{
+    color:white;
+    transition-duration: 750ms;
+}
+
+#panel-button:hover {
+    background-color: lightgoldenrodyellow;
+}
+#panel-button:hover a{
+    color:black;
+}
