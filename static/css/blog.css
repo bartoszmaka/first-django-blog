@@ -27,9 +27,20 @@ h1, h2, h3, h4 {
 
 .post-date {
     float: right;
-    color: #828282;
+    background-color: #FCA205;
+    padding: 20px;
+    border-radius: 25px;
 }
 
 .post {
+    border-radius: 25px;
+    padding: 20px;
+    height: 150px;
+    background-color: #fffccf;
     margin-bottom: 70px;
+}
+/* */
+
+.post:nth-child(even){
+    background-color: #f4f379;
 }
