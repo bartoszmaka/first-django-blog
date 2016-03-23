@@ -1,12 +1,16 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>New post</h1>
+    <h2>New post</h2>
     <form method="POST" class="post-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        {% for element in form %}
+            <div class="{{ element.html_name }}">
+                <p>{{ element.html_name|capfirst }}</p>
+                {{ element }}
+            </div>
+        {% endfor %}
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
-
 {% endblock %}
 
