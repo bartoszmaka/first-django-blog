@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<html>
+<head>
+{#  bootstrap  #}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{#  google fonts  #}
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+{# local stylesheets   #}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div class="page-header">
+        <h1>Siemanko</h1>
+        <h2>Witam na mojej stronie.</h2>
+    </div>
+
+    <div id="control-panel">
+        <div class="panel-button">
+            <a href="{% url 'post_list' %}"><p>Home</p></a>
+        </div>
+
+        {% if user.is_authenticated %}
+            <div class="panel-button">
+                <a href="{% url 'post_new' %}" class="top-menu"><p>New post</p></a>
+            </div>
+
+            <div class="panel-button">
+                <a href="/admin"><p>Admin panel</p></a>
+            </div>
+        {% endif %}
+    </div>
+
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-12">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

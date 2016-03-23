@@ -1,41 +1,17 @@
-{% load staticfiles %}
-<html>
-<head>
-{#  bootstrap  #}
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-{#  google fonts  #}
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-{# local stylesheets   #}
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-</head>
-<body>
+{% extends 'blog/base.html' %}
 
-
-
-<div class="page-header">
-    <h1>Siemanko</h1>
-    <h2>Witam na mojej stronie.</h2>
-</div>
-
-<div id="control-panel">
-    <div id="panel-button">
-        <a href="/admin"><p>Do panelu administracyjnego! </p></a>
-    </div>
-</div>
-
+{% block content %}
 <div class="posts">
-    {% for post in posts %}
+    {% for post in posts.reverse %}
         <div class="post">
             <div class="post-date">
                 <p>Published: {{ post.publish_date }}</p>
             </div>
             <div class="post-title">
-                <h3>{{ post.title }}</h3>
+                <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
             </div>
             <div class="post-content">
-                <p>{{ post.content|linebreaks }}</p>
+                <p>{{ post.content|linebreaks|truncatewords:30}}</p>
             </div>
             <div class="post-author">
                 <p>~{{ post.author }}</p>
@@ -43,6 +19,7 @@
         </div>
     {% endfor %}
 </div>
-
-</body>
-</html>
+<div id="footer">
+    <p>Bajerancja stopka</p>
+</div>
+{% endblock content %}

@@ -1,6 +1,18 @@
 h1 {
     color: #FCA205;
+}
+
+h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
+}
+
+h3 a {
+    font-size: 24px;
+    transition-duration: 750ms;
+}
+h3 a:hover {
+    font-size: 28px;
+    text-decoration: none;
 }
 .page-header {
     background-color: #ff9400;
@@ -14,17 +26,6 @@ h1 {
     text-decoration: none;
 }
 
-
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
-}
-
-
-.posts {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
 .post {
     border-radius: 25px;
     padding: 20px;
@@ -36,6 +37,10 @@ h1, h2, h3, h4 {
     font-family: "Source Code Pro", sans-serif;
     font-size: 16px;
     padding-left: 30px;
+}
+
+.post-title a {
+    color: black;
 }
 
 .post-date {
@@ -65,9 +70,9 @@ h1, h2, h3, h4 {
     background-color: #ff9400;
 }
 
-#panel-button {
-    margin-left: -5px;
-    margin-top: -5px;
+.panel-button {
+    float: left;
+    margin: -5px 5px 0 -5px;
     border-radius: 15px;
     width: 250px;
     height: 30px;
@@ -77,14 +82,28 @@ h1, h2, h3, h4 {
     background-color: #ff9400;
     transition-duration: 750ms;
 }
-#panel-button a{
+.panel-button a {
+    font-size: 14px;
     color:white;
     transition-duration: 750ms;
 }
 
-#panel-button:hover {
+.panel-button:hover {
     background-color: lightgoldenrodyellow;
 }
-#panel-button:hover a{
+.panel-button:hover a {
+    font-size: 16px;
     color:black;
+}
+#footer {
+    color: transparent;
+    height: 50px;
+    background-color: lightblue;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    transition-duration: 750ms;
+}
+#footer:hover {
+    color: black;
 }
